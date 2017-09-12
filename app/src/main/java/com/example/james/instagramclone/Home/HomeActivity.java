@@ -1,13 +1,16 @@
-package com.example.james.instagramclone;
+package com.example.james.instagramclone.Home;
 
 import android.content.Context;
-import android.support.design.internal.BottomNavigationItemView;
+import android.support.design.widget.TabLayout;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TableLayout;
 
+import com.example.james.instagramclone.R;
 import com.example.james.instagramclone.Utils.BottomNavigationViewHelper;
 import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
 
@@ -25,8 +28,25 @@ public class HomeActivity extends AppCompatActivity {
         Log.d(TAG, "onCreate: starting...");
 
         setupBottomNavigationView();
+        setupViewPager();
     }
 
+    // adds the 3 tabs to the top of the layout CAMERA , MESSAGES, HOME
+    private void setupViewPager(){
+        SectionsPagerAdapter adapter = new SectionsPagerAdapter(getSupportFragmentManager());
+        adapter.addFragment(new CameraFragment());
+        adapter.addFragment(new HomeFragment());
+        adapter.addFragment(new MessagesFragment());
+        ViewPager viewPager = (ViewPager) findViewById(R.id.container);
+        viewPager.setAdapter(adapter);
+
+        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
+        tabLayout.setupWithViewPager(viewPager);
+
+        tabLayout.getTabAt(0).setIcon(R.drawable.ic_camera);
+        tabLayout.getTabAt(1).setIcon(R.drawable.ic_action_name);
+        tabLayout.getTabAt(2).setIcon(R.drawable.ic_arrow);
+    }
 
     /**
      * BottomNavigationView Setup

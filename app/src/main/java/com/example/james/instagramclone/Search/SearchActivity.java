@@ -1,4 +1,4 @@
-package com.example.james.instagramclone;
+package com.example.james.instagramclone.Search;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.example.james.instagramclone.R;
 import com.example.james.instagramclone.Utils.BottomNavigationViewHelper;
 import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
 
@@ -15,12 +16,12 @@ import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
  * Created by James on 12/09/2017.
  */
 
-public class ShareActivity extends AppCompatActivity {
+public class SearchActivity extends AppCompatActivity {
 
-    private static final String TAG = "ShareActivity";
+    private static final String TAG = "SearchActivity";
 
-    private Context mContext = ShareActivity.this;
-    private static final int ACTIVITY_NUM = 2;
+    private Context mContext = SearchActivity.this;
+    private static final int ACTIVITY_NUM = 1;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
