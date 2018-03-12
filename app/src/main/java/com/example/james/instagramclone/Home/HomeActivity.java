@@ -8,10 +8,10 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.TableLayout;
 
 import com.example.james.instagramclone.R;
 import com.example.james.instagramclone.Utils.BottomNavigationViewHelper;
+import com.example.james.instagramclone.Utils.SectionsPagerAdapter;
 import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
 
 public class HomeActivity extends AppCompatActivity {
